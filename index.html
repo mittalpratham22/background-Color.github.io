@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .btn:hover{
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: #ffffff;
+        }
+        #aqua{
+            background-color: #00ffff;
+        }
+        #violet{
+            background-color: #ee82ee;
+        }
+        #green{
+            background-color: greenyellow;
+        }
+        #black{
+            background-color: #000000;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('white')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('aqua')"></span>
+        <span class="btn" id="violet" onclick="changeBG('violet')"></span>
+        <span class="btn" id="green" onclick="changeBG('greenyellow')"></span>
+        <span class="btn" id="black" onclick="changeBG('black')"></span>
+        
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="about us.jpg" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora cupiditate nisi facilis nemo corrupti blanditiis error sed labore? Sed minima soluta quasi dolorum eaque reiciendis doloremque, eveniet accusamus at quo nulla ratione natus consequuntur architecto expedita quas debitis odio minus deserunt eius veniam obcaecati assumenda quia? Reiciendis, consectetur dolorum et, fugit non veritatis possimus nisi eos sequi pariatur obcaecati ad voluptatum dolore voluptas doloribus! Tempora culpa quae, officiis sapiente fugiat dolorem provident explicabo expedita, voluptatem placeat et necessitatibus ducimus adipisci cumque non, sit reprehenderit iure mollitia accusantium exercitationem laudantium dolorum nulla! Illum animi repellendus enim quidem quos quisquam! Laudantium voluptate iure eligendi, unde distinctio aspernatur quas earum! Quam ex aliquam at ducimus doloribus inventore voluptate illum ullam maxime ipsa explicabo optio, veniam eius molestiae ad illo expedita alias dolorum modi iste magni sequi nam mollitia. Magni maxime nobis esse suscipit quos accusantium minus adipisci dolor pariatur beatae amet deleniti, libero explicabo debitis ut autem nulla exercitationem. Hic illum assumenda quia minus distinctio animi et, explicabo, omnis iure expedita beatae dolore atque ducimus sapiente sit nisi cupiditate odio debitis. Doloribus eos tempore facere, itaque neque possimus consectetur beatae deserunt cupiditate. Perferendis quasi dolores, temporibus magni rerum accusantium ratione est eligendi nobis alias voluptatum excepturi rem? Aut fugiat, debitis maiores nemo voluptatum nesciunt! Eaque magnam ipsam illo nihil quaerat odit nam veniam adipisci, quis porro itaque error neque laboriosam molestias minus omnis? Illum, eaque, ratione similique voluptatibus nam expedita beatae repellendus, qui unde suscipit explicabo eveniet nulla assumenda maxime possimus esse? Quas molestias tempora harum vero dolore, voluptatem dolorum officiis alias fugiat, voluptatibus aliquam, error aperiam. Nam quasi iure expedita quo natus sed blanditiis aliquam facere non magni quod voluptatum, saepe illum consequatur pariatur, consectetur ipsa doloribus? Quibusdam sequi explicabo sapiente incidunt laudantium excepturi molestiae, odio deserunt? Debitis eligendi inventore sed dolorum omnis, doloremque ad vel, deleniti dolores qui facilis, placeat atque. Officia repellat officiis accusamus error nulla itaque dolorem eius modi expedita inventore asperiores aut, fugiat ipsam cupiditate dolor autem consectetur ab accusantium impedit, voluptatibus nisi. Ut saepe tenetur veniam distinctio exercitationem enim, consequatur deleniti atque doloribus? Sequi perferendis, repudiandae cum delectus quam error numquam tenetur recusandae totam itaque quibusdam? Quaerat, dolores ratione officiis unde quo non in architecto, pariatur nemo, impedit praesentium porro est libero officia laborum. Tempora consequatur suscipit debitis tempore excepturi perferendis corrupti nobis dolorem quasi, odio nemo laboriosam quidem, optio voluptates voluptatem maiores! Nisi labore ducimus ratione dicta odit culpa dolore itaque quas voluptatem dolorum, animi, nulla eum temporibus laboriosam quod quisquam tenetur eligendi adipisci. Accusamus iusto suscipit perspiciatis? Magnam blanditiis eveniet officia, distinctio, commodi magni alias veniam voluptatem quae, optio architecto. Possimus ullam, voluptas architecto dolorum nesciunt, tempora laboriosam ducimus commodi est, atque harum ex asperiores! Voluptate assumenda, illo explicabo in modi magni vel debitis voluptatem, minima sed sint officiis reiciendis repudiandae, placeat molestiae aperiam! Adipisci natus, sed odio eaque ducimus eligendi quis consequatur mollitia quisquam, delectus aut dolore, assumenda modi at dolorem consequuntur animi nisi nihil? Sunt nemo aperiam cumque? Alias facilis consequatur fugiat saepe.
+    </p>
+
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor=color;
+            let txt=document.getElementsByClassName("text");
+            let button=document.getElementById("black")
+            if(color == "black"){
+                for(let ele of txt){
+                    ele.style.color="white";
+                }
+                button.style.border="2px solid white"
+            }
+            else{
+                for(let ele of txt){
+                    ele.style.color="black";
+                }
+                button.style.border="2px solid black"
+            }
+        }
+    </script>
+</body>
+</html>
